@@ -20,7 +20,7 @@ A fast, feature-rich terminal spreadsheet viewer and editor written in Rust.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sheetview.git
+git clone https://github.com/hemanthsingh003/sheetview.git
 cd sheetview
 
 # Build and install
@@ -56,82 +56,82 @@ sheetview data.csv -l 100
 
 ### Navigation
 
-| Key | Action |
-|-----|--------|
-| `↑` / `k` | Move up |
-| `↓` / `j` | Move down |
-| `←` / `h` | Move left |
-| `→` / `l` / `;` | Move right |
-| `Ctrl+B` | Page up |
-| `Ctrl+F` | Page down |
-| `gg` | First row |
-| `G` | Last row (or `10G` for row 10) |
-| `0` | First column |
-| `$` | Last column |
-| `Num + j/k/h/l` | Move by N cells (e.g., `10j`) |
+| Key             | Action                         |
+| --------------- | ------------------------------ |
+| `↑` / `k`       | Move up                        |
+| `↓` / `j`       | Move down                      |
+| `←` / `h`       | Move left                      |
+| `→` / `l` / `;` | Move right                     |
+| `Ctrl+B`        | Page up                        |
+| `Ctrl+F`        | Page down                      |
+| `gg`            | First row                      |
+| `G`             | Last row (or `10G` for row 10) |
+| `0`             | First column                   |
+| `$`             | Last column                    |
+| `Num + j/k/h/l` | Move by N cells (e.g., `10j`)  |
 
 ### Search
 
-| Key | Action |
-|-----|--------|
-| `/` | Start search |
-| `n` | Next match |
-| `N` | Previous match |
-| `R` | Toggle regex mode |
+| Key | Action                                            |
+| --- | ------------------------------------------------- |
+| `/` | Start search                                      |
+| `n` | Next match                                        |
+| `N` | Previous match                                    |
+| `R` | Toggle regex mode                                 |
 | `c` | Toggle column filter (search current column only) |
 
 ### Sort
 
-| Key | Action |
-|-----|--------|
+| Key | Action                                    |
+| --- | ----------------------------------------- |
 | `s` | Sort by selected column (toggle asc/desc) |
-| `R` | Clear sort |
+| `R` | Clear sort                                |
 
 ### Row/Column Operations
 
-| Key | Action |
-|-----|--------|
+| Key | Action           |
+| --- | ---------------- |
 | `o` | Insert row below |
 | `O` | Insert row above |
-| `x` | Delete row |
-| `Y` | Copy entire row |
-| `P` | Paste row |
+| `x` | Delete row       |
+| `Y` | Copy entire row  |
+| `P` | Paste row        |
 
 ### Editing
 
-| Key | Action |
-|-----|--------|
+| Key           | Action    |
+| ------------- | --------- |
 | `Enter` / `i` | Edit cell |
-| `y` | Copy cell |
-| `d` | Cut cell |
-| `p` | Paste |
-| `u` | Undo |
-| `r` | Redo |
+| `y`           | Copy cell |
+| `d`           | Cut cell  |
+| `p`           | Paste     |
+| `u`           | Undo      |
+| `r`           | Redo      |
 
 ### Actions
 
-| Key | Action |
-|-----|--------|
-| `?` | Toggle help |
-| `Ctrl+S` / `:w` | Save |
-| `:q` | Quit (warn if unsaved) |
-| `:q!` | Force quit |
-| `Ctrl+P` | Command palette |
+| Key             | Action                 |
+| --------------- | ---------------------- |
+| `?`             | Toggle help            |
+| `Ctrl+S` / `:w` | Save                   |
+| `:q`            | Quit (warn if unsaved) |
+| `:q!`           | Force quit             |
+| `Ctrl+P`        | Command palette        |
 
 ## Commands
 
 Enter command mode with `:` then type:
 
-| Command | Description |
-|---------|-------------|
-| `:w` | Save file |
-| `:q` | Quit (warn if unsaved) |
-| `:q!` | Force quit |
-| `:wq` | Save and quit |
-| `:export <path>` | Export to CSV/Excel |
-| `:replace <query>` | Find and replace |
-| `:replaceall <query>` | Replace all matches |
-| `:f` | Toggle column filter |
+| Command               | Description            |
+| --------------------- | ---------------------- |
+| `:w`                  | Save file              |
+| `:q`                  | Quit (warn if unsaved) |
+| `:q!`                 | Force quit             |
+| `:wq`                 | Save and quit          |
+| `:export <path>`      | Export to CSV/Excel    |
+| `:replace <query>`    | Find and replace       |
+| `:replaceall <query>` | Replace all matches    |
+| `:f`                  | Toggle column filter   |
 
 ## Development
 
@@ -151,20 +151,21 @@ cargo clippy
 
 ## Tech Stack
 
-| Crate | Version | Purpose |
-|-------|---------|---------|
-| ratatui | 0.30 | TUI framework |
-| crossterm | 0.29 | Terminal backend |
-| clap | 4.6 | CLI argument parsing |
-| csv | 1.4 | CSV streaming reads |
-| calamine | 0.34 | Excel (.xlsx/.xls) reading |
-| arboard | 3.6 | Clipboard support |
-| regex | 1.11 | Regex search |
-| rust_xlsxwriter | 0.28 | Excel writing |
+| Crate           | Version | Purpose                    |
+| --------------- | ------- | -------------------------- |
+| ratatui         | 0.30    | TUI framework              |
+| crossterm       | 0.29    | Terminal backend           |
+| clap            | 4.6     | CLI argument parsing       |
+| csv             | 1.4     | CSV streaming reads        |
+| calamine        | 0.34    | Excel (.xlsx/.xls) reading |
+| arboard         | 3.6     | Clipboard support          |
+| regex           | 1.11    | Regex search               |
+| rust_xlsxwriter | 0.28    | Excel writing              |
 
 ## Roadmap
 
 ### Phase 1 — MVP (Completed)
+
 - Open CSV/TSV/XLSX files
 - Scrollable table view
 - Column headers, row numbers
@@ -173,24 +174,28 @@ cargo clippy
 - Save
 
 ### Phase 2 — Search, Sort, Filter (Completed)
+
 - Text search
 - Regex search
 - Column-scoped search
 - Sort by column
 
 ### Phase 3 — Editing (Completed)
+
 - Inline cell editing
 - Insert/delete rows & columns
 - Undo/redo
 - Copy/cut/paste
 
 ### Phase 4 — Analysis (Planned)
+
 - Column stats (min, max, avg, sum, count, null count)
 - Data type detection
 - Highlight null/empty cells
 - Duplicate row detection
 
 ### Phase 5 — Advanced (Planned)
+
 - Multi-sheet support (XLSX)
 - Freeze panes
 - Auto-filter dropdowns
