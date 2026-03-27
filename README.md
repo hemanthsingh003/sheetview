@@ -6,13 +6,16 @@ A fast, feature-rich terminal spreadsheet viewer and editor written in Rust.
 
 - **Multiple Format Support**: Open CSV, TSV, and Excel (.xlsx/.xls) files
 - **Vim-style Navigation**: Navigate with `h/j/k/l`, arrow keys, and more
-- **Search & Replace**: Text search, regex support, column-scoped search
+- **Search & Replace**: Text search, regex support, column-scoped search, find & replace
 - **Sort & Filter**: Sort by columns, filter rows by content
 - **Inline Editing**: Edit cells directly in the terminal
 - **Row/Column Operations**: Insert, delete, copy rows and columns
 - **Undo/Redo**: Full undo/redo support for all edits
+- **Multi-sheet Support**: Navigate between Excel sheets
 - **Export**: Export to CSV or Excel format
 - **Command Palette**: Quick access to commands with `Ctrl+P`
+- **Column Statistics**: View min, max, avg, sum, count for selected column
+- **Duplicate Detection**: Highlight duplicate rows
 
 ## Installation
 
@@ -108,15 +111,28 @@ sheetview data.csv -l 100
 | `u`           | Undo      |
 | `r`           | Redo      |
 
+### Sheets (Excel)
+
+| Key | Action |
+|-----|--------|
+| `t` | Next sheet |
+| `T` | Previous sheet |
+
+### Analysis
+
+| Key | Action |
+|-----|--------|
+| `U` | Toggle duplicate highlight |
+
 ### Actions
 
 | Key             | Action                 |
 | --------------- | ---------------------- |
 | `?`             | Toggle help            |
+| `Ctrl+P`        | Command palette        |
 | `Ctrl+S` / `:w` | Save                   |
 | `:q`            | Quit (warn if unsaved) |
 | `:q!`           | Force quit             |
-| `Ctrl+P`        | Command palette        |
 
 ## Commands
 
@@ -164,42 +180,12 @@ cargo clippy
 
 ## Roadmap
 
-### Phase 1 — MVP (Completed)
+Future planned features:
 
-- Open CSV/TSV/XLSX files
-- Scrollable table view
-- Column headers, row numbers
-- Cell selection
-- Auto-detect delimiter
-- Save
-
-### Phase 2 — Search, Sort, Filter (Completed)
-
-- Text search
-- Regex search
-- Column-scoped search
-- Sort by column
-
-### Phase 3 — Editing (Completed)
-
-- Inline cell editing
-- Insert/delete rows & columns
-- Undo/redo
-- Copy/cut/paste
-
-### Phase 4 — Analysis (Planned)
-
-- Column stats (min, max, avg, sum, count, null count)
 - Data type detection
 - Highlight null/empty cells
-- Duplicate row detection
-
-### Phase 5 — Advanced (Planned)
-
-- Multi-sheet support (XLSX)
 - Freeze panes
 - Auto-filter dropdowns
-- Export filtered data
 - Theming
 - Mouse support
 
