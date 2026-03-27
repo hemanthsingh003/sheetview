@@ -1,0 +1,26 @@
+# Build results
+/target/
+**/target/
+
+# Cargo lock (optional - uncomment if you don't want to commit it)
+# Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files (optional - remove if you want to commit test data)
+*.csv
+*.xlsx
+*.xls
+
+# Backup files
+*.bak
+*.tmp
